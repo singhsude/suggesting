@@ -103,6 +103,8 @@ public class Suggestor {
 
             br = new BufferedReader(new InputStreamReader(/*classLoader.getResourceAsStream("match.txt")));//*/in));
             //Read File Line By Line
+	    boolean objectMatch = false;
+	    boolean ageMatch = false;
             while ((strLine = br.readLine()) != null) {
 		//for(int p = 0; p < keys2.length; p++)
                 // Print the content on the console
@@ -111,8 +113,6 @@ public class Suggestor {
                     //System.out.println("taking yes!");
 			String[] strLines = new String[5];
 			int counter = 0;
-                    	boolean objectMatch = false;
-			boolean ageMatch = false;
                         while ((strLine = br.readLine()) != null) {
                             // Print the content on the console
 			    for(int k = 0; k < keys2.length; k++) {
@@ -141,6 +141,11 @@ public class Suggestor {
                                 break;
 			    }
                         }
+			if(objectMatch && ageMatch)
+	         	    {
+				//result2 += "would you like to go for: " + strLines[0];
+                                break;
+			    }
                     //result2 += "do you want to go for: " + /*getStmt(*/strLine/*)*/ + "<br><br>";
                     //result2 += "taking yes!" + "\n";
 /*
