@@ -222,9 +222,9 @@ public class Suggestor {
 		//InputStream in3 = new InputStreamReader(FileLoader.class.getResourceAsStream(fileName) );
             // Get the object of DataInputStream
             //in = new DataInputStream(in3);//fstream);
-//		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 //		InputStream input = classLoader.getResourceAsStream("foo.properties");
-            br = new BufferedReader(new InputStreamReader(Suggestor.class./*classLoader.*/getResourceAsStream(fileName)));
+            br = new BufferedReader(new InputStreamReader(/*Suggestor.class.*/classLoader.getResourceAsStream(fileName)));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
