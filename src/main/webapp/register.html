@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Suggestor POC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="confirm.jsp">
+            <table>
+                <tr><td>Title:</td><td><input type="text" name="name" value="e.g. Reliance car insurance"></td></tr>&nbsp;//what you are offering
+                <tr><td>Name/Object:</td><td><input type="text" name="obj" value="e.g. Honda"></td></tr>&nbsp;//what object you are targetting e.g. car/fruit..etc.
+                <tr><td>type:</td><td><select name = "type">
+                            <option value="car" selected>car</option>
+                            <option value="fruit">fruit</option>
+                        </select><br></td></tr>&nbsp;//what is 't's type
+                <tr><td>Other:</td><td><input type="text" name="other" value="umm, food"></td></tr>&nbsp;//Any Other type
+                <tr><td> Age Targetted:</td><td><select name = "age">
+                            <option value="child">child</option>
+                            <option value="youth" selected>youth</option>
+                            <option value="elder">elder</option>
+                            <option value="old">old</option>
+                        </select></td></tr>&nbsp;//what age you are expecting
+            </table>
+            <input type="submit"><br>
+        </form>
+    </body>
+</html>
