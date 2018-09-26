@@ -3,7 +3,7 @@ package com.singhsude.suggestor;
 import java.io.*;
 
 public class Register {
-	public static String Result(String store) {
+	public String Result(String store) {
 	        try {   
                         //ClassLoader classLoader = Register.class.getClassLoader();
 			//Writer outputStreamWriter = new OutputStreamWriter(new File(/*classLoader.getResourceAsStream(*/"store.txt"/*)*/));//outputStream);
