@@ -129,9 +129,19 @@ public class Suggestor {
 					counter = 0;
 			    }
 
-			    if(objectMatch && ageMatch && strLines[0].length() > 2)
+			    if(objectMatch && ageMatch)
 	         	    {
-				result2 += "would you like to go for: " + strLines[0];
+				if(strLines[0].length() > 2)
+					result2 += "would you like to go for: " + strLines[0];
+				else if(strLines[1].length() > 2)
+					result2 += "would you like to go for: " + strLines[1];
+				else if(strLines[2].length() > 2)
+					result2 += "would you like to go for: " + strLines[2];
+				else if(strLines[3].length() > 2)
+					result2 += "would you like to go for: " + strLines[3];
+				else if(strLines[4].length() > 2)
+					result2 += "would you like to go for: " + strLines[4];
+
                                 break;
 			    }
 			    else
@@ -145,12 +155,12 @@ public class Suggestor {
 				//result2 += "would you like to go for: " + strLines[0];
                                 break;
 			    }
-                        }
+                        }/*
 			if(objectMatch && ageMatch)
 	         	    {
 				//result2 += "would you like to go for: " + strLines[0];
                                 break;
-			    }
+			    }*/
                     //result2 += "do you want to go for: " + /*getStmt(*/strLine/*)*/ + "<br><br>";
                     //result2 += "taking yes!" + "\n";
 /*
