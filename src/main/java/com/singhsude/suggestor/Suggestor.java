@@ -83,7 +83,7 @@ public class Suggestor {
         //System.out.println("concrete: " + key);
         //System.out.println("age: " + result);
 
-        result2 += "concrete: " + nouns + "<br>";
+        result2 += "concrete: " + key + "<br>";
         result2 += "age: " + result + "<br>";
         
         String strLine = "";
@@ -112,7 +112,7 @@ public class Suggestor {
 			    if(strLine.length() > 2)
 			    {
 				strLines[counter++] = strLine;
-				if(counter >= 4)
+				if(counter >= 5)
 					counter = 0;
 			    }
 
@@ -138,13 +138,13 @@ public class Suggestor {
 			    if(objectMatch && ageMatch)
 	         	    {
 				//result2 += "would you like to go for: " + strLines[0];
-                                //break;
+                                break;
 			    }
 			    }
 			    if(objectMatch && ageMatch)
 	         	    {
 				//result2 += "would you like to go for: " + strLines[0];
-                                //break;
+                                break;
 			    }
                         }
 
