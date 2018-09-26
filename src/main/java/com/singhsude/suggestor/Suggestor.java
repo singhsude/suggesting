@@ -135,6 +135,11 @@ public class Suggestor {
                                 break;
 			    }
 			    }
+			    if(objectMatch && ageMatch)
+	         	    {
+				//result2 += "would you like to go for: " + strLines[0];
+                                break;
+			    }
                         }
                     //result2 += "do you want to go for: " + /*getStmt(*/strLine/*)*/ + "<br><br>";
                     //result2 += "taking yes!" + "\n";
