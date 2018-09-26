@@ -85,7 +85,114 @@ public class Suggestor {
 
         result2 += "concrete: " + key + "<br>";
         result2 += "age: " + result + "<br>";
-       
+        
+        String strLine = "";
+        FileInputStream fstream;
+        DataInputStream in;
+        BufferedReader br;
+        try {
+		// Open the file that is the first 
+            // command line parameter
+	    String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
+            fstream = new FileInputStream(absolutePath + "registered.txt");
+		//InputStream in1 = new InputStreamReader(FileLoader.class.getResourceAsStream("match.txt") );
+            // Get the object of DataInputStream
+            in = new DataInputStream(fstream);
+		//ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+//		InputStream input = classLoader.getResourceAsStream("foo.properties");
+
+            br = new BufferedReader(new InputStreamReader(/*classLoader.getResourceAsStream("match.txt")));//*/in));
+            //Read File Line By Line
+            while ((strLine = br.readLine()) != null) {
+		//for(int p = 0; p < keys2.length; p++)
+                // Print the content on the console
+                //if (strLine.contains(keys2[p])) {
+                    //System.out.println("do you want to go for: " + strLine + " yes or no?");
+                    //System.out.println("taking yes!");
+			String[] strLines = new String[5];
+			int counter = 0;
+                    	boolean objectMatch = false;
+			boolean ageMatch = false;
+                        while ((strLine = br.readLine()) != null) {
+                            // Print the content on the console
+			    for(int k = 0; k < keys2.length; k++) {
+                            if (strLine.trim().toLowerCase().equals(result.trim().toLowerCase())){
+                                ageMatch = true;
+                            }
+			    if (strLine.trim().toLowerCase().contains(keys2[k].trim().toLowerCase())) {
+                                objectMatch = true;
+                            }
+			    if(strLine.length() > 2)
+			    {
+				strLines[counter++] = strLine;
+				if(counter >= 4)
+					counter = 0;
+			    }
+
+			    if(objectMatch && ageMatch)
+	         	    {
+				result2 += "would you like to go for: " + strLines[0];
+                                break;
+			    }
+			    }
+                        }
+                    //result2 += "do you want to go for: " + /*getStmt(*/strLine/*)*/ + "<br><br>";
+                    //result2 += "taking yes!" + "\n";
+/*
+                    try {
+				// Open the file that is the first 
+                        // command line parameter
+                        //fstream = new FileInputStream("C://dictionary/vendors.txt");
+			//InputStream in2 = new InputStreamReader(FileLoader.class.getResourceAsStream("vendors.txt") );
+                        // Get the object of DataInputStream
+                        //in = new DataInputStream(in2);//fstream);
+		        br = new BufferedReader(new InputStreamReader(classLoader.getResourceAsStream("vendors.txt")));
+                        //Read File Line By Line
+			String[] strLines = new String[5];
+			int counter = 0;
+			boolean objectMatch = false;
+			boolean ageMatch = false;
+                        while ((strLine = br.readLine()) != null) {
+                            // Print the content on the console
+			    for(int k = 0; k < keys.length; k++) {
+                            if (strLine.trim().toLowerCase().equals(result.trim().toLowerCase())){
+                                ageMatch = true;
+                            }
+			    if (strLine.trim().toLowerCase().contains(keys[k].trim().toLowerCase())) {
+                                objectMatch = true;
+                            }
+			    if(strLine.length() > 2)
+			    {
+				strLines[counter++] = strLine;
+				if(counter >= 4)
+					counter = 0;
+			    }
+
+			    if(objectMatch && ageMatch)
+	         	    {
+				result2 += "would you like to go for: " + strLines[0];
+                                break;
+			    }
+			    }
+                        }
+                        //Close the input stream
+                        //in.close();
+                    } catch (Exception e) {//Catch exception if any
+                        //System.err.println("Error: " + e.getMessage());
+                    }*/
+
+                    //System.out.println (strLine);
+                //}
+
+                //break;
+
+            }
+            //Close the input stream
+            in.close();
+        } catch (Exception e) {//Catch exception if any
+            //System.err.println("Error: " + e.getMessage());
+        }
+
         return result2;
         //System.out.println (strLine);
     }
@@ -112,13 +219,15 @@ public class Suggestor {
         try {
 		// Open the file that is the first 
             // command line parameter
-            //fstream = new FileInputStream(fileName);
+	    String absolutePath = System.getenv("OPENSHIFT_REPO_DIR");
+	    absolutePath += "src/main/java/";
+            fstream = new FileInputStream(absolutePath + fileName);
 		//InputStream in3 = new InputStreamReader(FileLoader.class.getResourceAsStream(fileName) );
             // Get the object of DataInputStream
-            //in = new DataInputStream(in3);//fstream);
-		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            in = new DataInputStream(fstream);
+//		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 //		InputStream input = classLoader.getResourceAsStream("foo.properties");
-            br = new BufferedReader(new InputStreamReader(/*Suggestor.class.*/classLoader.getResourceAsStream(fileName)));
+            br = new BufferedReader(new InputStreamReader(in));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console

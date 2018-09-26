@@ -7,7 +7,8 @@ public class Register {
 	        try {   
                         //ClassLoader classLoader = Register.class.getClassLoader();
 			//Writer outputStreamWriter = new OutputStreamWriter(new File(/*classLoader.getResourceAsStream(*/"store.txt"/*)*/));//outputStream);
-                        PrintWriter p = new PrintWriter("registered.txt");
+		        String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
+                        PrintWriter p = new PrintWriter(absolutePath + "registered.txt");
 			p.write(store + "\n\n");
 			p.close();
         	} catch (Exception e) {
