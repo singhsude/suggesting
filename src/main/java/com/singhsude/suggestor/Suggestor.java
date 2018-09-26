@@ -129,10 +129,15 @@ public class Suggestor {
 					counter = 0;
 			    }
 
-			    if(objectMatch && ageMatch)
+			    if(objectMatch && ageMatch && strLines[0].length() > 2)
 	         	    {
 				result2 += "would you like to go for: " + strLines[0];
                                 break;
+			    }
+			    else
+			    {
+				objectMatch = false;
+	    			ageMatch = false;
 			    }
 			    }
 			    if(objectMatch && ageMatch)
