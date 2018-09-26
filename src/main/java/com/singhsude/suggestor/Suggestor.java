@@ -92,7 +92,7 @@ public class Suggestor {
         BufferedReader br;
         try {
 	    String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
-            fstream = new FileInputStream(absolutePath + "registered.txt");
+            fstream = new FileInputStream(absolutePath + "register.txt");
             in = new DataInputStream(fstream);
             br = new BufferedReader(new InputStreamReader(in));
 
@@ -128,13 +128,21 @@ public class Suggestor {
 					result2 += "would you like to go for: " + strLines[3];
 				else if(strLines[4].length() > 2)
 					result2 += "would you like to go for: " + strLines[4];
-
-                                break;
+				else
+			    	{
+					objectMatch = false;
+		    			ageMatch = false;
+		             	}
 			    }
 			    else
 			    {
 				objectMatch = false;
 	    			ageMatch = false;
+			    }
+			    if(objectMatch && ageMatch)
+	         	    {
+				//result2 += "would you like to go for: " + strLines[0];
+                                break;
 			    }
 			    }
 			    if(objectMatch && ageMatch)
