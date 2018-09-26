@@ -83,7 +83,7 @@ public class Suggestor {
         //System.out.println("concrete: " + key);
         //System.out.println("age: " + result);
 
-        result2 += "concrete: " + key + "<br>";
+        result2 += "concrete: " + nouns + "<br>";
         result2 += "age: " + result + "<br>";
         
         String strLine = "";
