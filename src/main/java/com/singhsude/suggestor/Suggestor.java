@@ -85,7 +85,7 @@ public class Suggestor {
 
         result2 += "concrete: " + key + "<br>";
         result2 += "age: " + result + "<br>";
-        
+        /*
         String strLine = "";
         FileInputStream fstream;
         DataInputStream in;
@@ -136,7 +136,7 @@ public class Suggestor {
 			    }
                         }
                     //result2 += "do you want to go for: " + /*getStmt(*/strLine/*)*/ + "<br><br>";
-                    //result2 += "taking yes!" + "\n";
+                    //result2 += "taking yes!" + "\n";*/
 /*
                     try {
 				// Open the file that is the first 
@@ -178,7 +178,7 @@ public class Suggestor {
                         //in.close();
                     } catch (Exception e) {//Catch exception if any
                         //System.err.println("Error: " + e.getMessage());
-                    }*/
+                    }*//*
 
                     //System.out.println (strLine);
                 //}
@@ -190,7 +190,7 @@ public class Suggestor {
             in.close();
         } catch (Exception e) {//Catch exception if any
             //System.err.println("Error: " + e.getMessage());
-        }
+        }*/
 
         return result2;
         //System.out.println (strLine);
