@@ -112,7 +112,7 @@ public class Suggestor {
 			    if(strLine.length() > 2)
 			    {
 				strLines[counter++] = strLine;
-				if(counter >= 5)
+				if(counter >= 4)
 					counter = 0;
 			    }
 
