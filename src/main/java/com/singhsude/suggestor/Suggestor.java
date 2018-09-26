@@ -142,21 +142,21 @@ public class Suggestor {
 			    if(objectMatch && ageMatch)
 	         	    {
 				//result2 += "would you like to go for: " + strLines[0];
-                                break;
+                                //break;
 			    }
 			    }
 			    if(objectMatch && ageMatch)
 	         	    {
 				//result2 += "would you like to go for: " + strLines[0];
-                                break;
+                                //break;
 			    }
                         }
 
             
             //Close the input stream
             in.close();
-        } catch (Exception e) {//Catch exception if any
-            //System.err.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+	    return "false";
         }
 
         return result2;
