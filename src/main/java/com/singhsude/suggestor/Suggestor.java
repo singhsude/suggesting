@@ -93,7 +93,7 @@ public class Suggestor {
         try {
 		// Open the file that is the first 
             // command line parameter
-            fstream = new FileInputStream(process.env.OPENSHIFT_DATA_DIR + "registered.txt");
+            fstream = new FileInputStream("registered.txt");
 		//InputStream in1 = new InputStreamReader(FileLoader.class.getResourceAsStream("match.txt") );
             // Get the object of DataInputStream
             in = new DataInputStream(fstream);
@@ -218,13 +218,13 @@ public class Suggestor {
         try {
 		// Open the file that is the first 
             // command line parameter
-            fstream = new FileInputStream(process.env.OPENSHIFT_DATA_DIR + fileName);
+            //fstream = new FileInputStream(fileName);
 		//InputStream in3 = new InputStreamReader(FileLoader.class.getResourceAsStream(fileName) );
             // Get the object of DataInputStream
-            in = new DataInputStream(fstream);
+            //in = new DataInputStream(in3);//fstream);
 //		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 //		InputStream input = classLoader.getResourceAsStream("foo.properties");
-            br = new BufferedReader(new InputStreamReader(in));
+            br = new BufferedReader(new InputStreamReader(Suggestor.class./*classLoader.*/getResourceAsStream(fileName)));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
