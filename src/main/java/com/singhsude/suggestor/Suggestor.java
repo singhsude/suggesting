@@ -229,15 +229,17 @@ public class Suggestor {
         try {
 		// Open the file that is the first 
             // command line parameter
-	    String absolutePath = System.getenv("OPENSHIFT_REPO_DIR");
-	    absolutePath += "src/main/java/";
-            fstream = new FileInputStream(absolutePath + fileName);
+	    //String absolutePath = System.getenv("OPENSHIFT_REPO_DIR");
+	    //absolutePath += "src/main/java/";
+            //fstream = new FileInputStream(absolutePath + fileName);
 		//InputStream in3 = new InputStreamReader(FileLoader.class.getResourceAsStream(fileName) );
             // Get the object of DataInputStream
-            in = new DataInputStream(fstream);
+            //in = new DataInputStream(fstream);
 //		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 //		InputStream input = classLoader.getResourceAsStream("foo.properties");
-            br = new BufferedReader(new InputStreamReader(in));
+
+
+            br = new BufferedReader(new InputStreamReader(getClass().getClassLoader().getResources("resources/" + fileName)));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
