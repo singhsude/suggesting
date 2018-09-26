@@ -134,11 +134,7 @@ public class Suggestor {
 		    			ageMatch = false;
 		             	}
 			    }
-			    else
-			    {
-				objectMatch = false;
-	    			ageMatch = false;
-			    }
+			    
 			    if(objectMatch && ageMatch)
 	         	    {
 				//result2 += "would you like to go for: " + strLines[0];
