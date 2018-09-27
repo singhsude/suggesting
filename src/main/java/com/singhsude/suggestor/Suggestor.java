@@ -92,7 +92,7 @@ public class Suggestor {
             in = new DataInputStream(fstream);
             br = new BufferedReader(new InputStreamReader(in));
 
-			String[] strLines = new String[5];
+			String[] strLines = new String[4];
 			int counter = 0;
 			boolean objectMatch = false;
 			boolean ageMatch = false;
