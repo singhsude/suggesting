@@ -92,7 +92,7 @@ public class Suggestor {
             in = new DataInputStream(fstream);
             br = new BufferedReader(new InputStreamReader(in));
 
-			String[] strLines = new String[5];
+			String strLines = new String[5];
 			int counter = 0;
 			boolean objectMatch = false;
 			boolean ageMatch = false;
@@ -114,21 +114,7 @@ public class Suggestor {
 
 			    if(objectMatch && ageMatch)
 	         	    {
-				if(strLines[0].length() > 2)
-					result2 += "would you like to go for: " + strLines[0];
-				else if(strLines[1].length() > 2)
-					result2 += "would you like to go for: " + strLines[1];
-				else if(strLines[2].length() > 2)
-					result2 += "would you like to go for: " + strLines[2];
-				else if(strLines[3].length() > 2)
-					result2 += "would you like to go for: " + strLines[3];
-				else if(strLines[4].length() > 2)
-					result2 += "would you like to go for: " + strLines[4];
-				else
-			    	{
-					objectMatch = false;
-		    			ageMatch = false;
-		             	}
+				result2 += "would you like to go for: " + getStmt(strLines);
 			    }
 			    
 			    if(objectMatch && ageMatch)
@@ -202,9 +188,8 @@ public class Suggestor {
 
     }
 
-    public String getStmt(String str)
+    public String getStmt(String[] stmts)
     {
-	String[] stmts = str.split(" ");
         String stmt = "";
         int len = 0;
         for (int i = 0; i < stmts.length; i++) {
