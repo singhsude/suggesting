@@ -99,7 +99,8 @@ public class Suggestor {
                         while ((strLine = br.readLine()) != null) {
 			    if(strLine.length() > 2)
 			    {
-				strLines[counter++] = strLine;
+				if(counter < 5)
+					strLines[counter++] = strLine;
 				if(counter >= 5)
 					counter = 0;
 			    }
@@ -108,6 +109,7 @@ public class Suggestor {
 			    for(int k = 0; k < keys2.length; k++) {
                             if (strLine.trim().toLowerCase().equals(result.trim().toLowerCase())){
                                 ageMatch = true;
+				counter = 0;
                             }
 			    if (strLine.trim().toLowerCase().contains(keys2[k].trim().toLowerCase())) {
                                 objectMatch = true;
