@@ -84,7 +84,7 @@ public class Suggestor {
         //System.out.println("age: " + result);
 
         result2 += "concrete: " + key + "<br>";
-        result2 += "age: " + keys + "<br>";
+        result2 += "age: " + result + "<br>";
         
         String strLine = "";
         FileInputStream fstream;
@@ -177,19 +177,11 @@ public class Suggestor {
         DataInputStream in;
         BufferedReader br;
         try {
-		// Open the file that is the first 
-            // command line parameter
-	    //String absolutePath = System.getenv("OPENSHIFT_REPO_DIR");
-	    //absolutePath += "resources/";
-            //fstream = new FileInputStream(absolutePath + fileName);
-		//InputStream in3 = new InputStreamReader(FileLoader.class.getResourceAsStream(fileName) );
-            // Get the object of DataInputStream
-            //in = new DataInputStream(fstream);
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		InputStream input = classLoader.getResourceAsStream(fileName);//"foo.properties");
+		InputStream input = classLoader.getResourceAsStream(fileName);
 
 
-            br = new BufferedReader(new InputStreamReader(input));//classLoader.getResource()));
+            br = new BufferedReader(new InputStreamReader(input));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
