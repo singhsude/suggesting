@@ -84,7 +84,7 @@ public class Suggestor {
         //System.out.println("age: " + result);
 
         result2 += "concrete: " + key + "<br>";
-        result2 += "age: " + result + "<br>";
+        result2 += "age: " + keys + "<br>";
         
         String strLine = "";
         FileInputStream fstream;
