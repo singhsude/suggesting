@@ -92,11 +92,18 @@ public class Suggestor {
             in = new DataInputStream(fstream);
             br = new BufferedReader(new InputStreamReader(in));
 
-			String[] strLines = new String[5];
+			String[] strLines = new String[4];
 			int counter = 0;
 			boolean objectMatch = false;
 			boolean ageMatch = false;
                         while ((strLine = br.readLine()) != null) {
+			    if(strLine.length() > 2)
+			    {
+				strLines[counter++] = strLine;
+				if(counter >= 4)
+					counter = 0;
+			    }
+
                             // Print the content on the console
 			    for(int k = 0; k < keys2.length; k++) {
                             if (strLine.trim().toLowerCase().equals(result.trim().toLowerCase())){
@@ -107,16 +114,9 @@ public class Suggestor {
 				
                             }
 
-          		    if(strLine.length() > 2)
-			    {
-				strLines[counter++] = strLine;
-				if(counter >= 5)
-					counter = 0;
-			    }
-
 			    if(objectMatch && ageMatch)
 	         	    {
-				result2 += "would you like to go for: " + getStmt(strLines);
+				result2 += "would you like to go for: " + strLines[0];//getStmt(strLines);
 			    }
 			    
 			    if(objectMatch && ageMatch)
