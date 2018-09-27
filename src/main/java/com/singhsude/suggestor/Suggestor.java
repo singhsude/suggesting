@@ -92,7 +92,7 @@ public class Suggestor {
             in = new DataInputStream(fstream);
             br = new BufferedReader(new InputStreamReader(in));
 
-			String[] strLines = new String[5];
+			String[] strLines = new String[3];
 			int counter = 0;
 			boolean objectMatch = false;
 			boolean ageMatch = false;
@@ -110,13 +110,13 @@ public class Suggestor {
           		    if(strLine.length() > 2)
 			    {
 				strLines[counter++] = strLine;
-				if(counter >= 5)
+				if(counter >= 3)
 					counter = 0;
 			    }
 
 			    if(objectMatch && ageMatch)
 	         	    {
-				result2 += "would you like to go for: " + strLines[0];//getStmt(strLines);
+				result2 += "would you like to go for: " + getStmt(strLines);
 			    }
 			    
 			    if(objectMatch && ageMatch)
