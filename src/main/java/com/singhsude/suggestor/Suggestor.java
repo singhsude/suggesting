@@ -21,10 +21,6 @@ public class Suggestor {
 		if(readFile(file, word))
 			break;
 	    }
-	    //InputStream in = new InputStreamReader(FileLoader.class.getResourceAsStream("/dictionary") );
-
-            //final File folder = new File("C://dictionary");
-            //listFilesForFolder(folder, word);
         }
 
         String result = "";
@@ -112,7 +108,7 @@ public class Suggestor {
 			    if(strLine.length() > 2)
 			    {
 				strLines[counter++] = strLine;
-				if(counter >= 5)
+				if(counter >= 4)
 					counter = 0;
 			    }
 
