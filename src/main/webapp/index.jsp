@@ -6,7 +6,7 @@
     </head>
     <body>
         <form action="result.jsp">
-            Enter Statement:&nbsp;<input type="text" name="stmt" title="Enter Statement: ">
+            Enter Statement:&nbsp;<input type="text" name="stmt" title="Enter any Statement: ">&nbsp;for example: i like car, i drive wegaonar.. etc.
             <input type="submit">
         </form>
     </body>
