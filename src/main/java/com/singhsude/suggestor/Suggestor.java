@@ -109,13 +109,13 @@ public class Suggestor {
 			    for(int k = 0; k < keys2.length; k++) {
                             if (strLine.trim().toLowerCase().equals(result.trim().toLowerCase())){
                                 ageMatch = true;
-				counter = 0;
                             }
 			    if (strLine.trim().toLowerCase().contains(keys2[k].trim().toLowerCase())) {
                                 objectMatch = true;
 				
                             }
-
+			    if(strLine.equals("child") || strLine.equals("old") || strLine.equals("elder") || strLine.equals("youth"))
+				counter = 0;
 			    if(objectMatch && ageMatch)
 	         	    {
 				result2 += "would you like to go for: " + strLines[0];//getStmt(strLines);
