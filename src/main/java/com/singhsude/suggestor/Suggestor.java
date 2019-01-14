@@ -121,10 +121,9 @@ public class Suggestor {
 				result2 += strLines[0] + "\n" + strLines[5] + "\n\n";//getStmt(strLines);
 			    }
                         }
-
-            
-            //Close the input stream
-            in.close();
+            		//Close the input stream
+            		in.close();
+		}
         } catch (Exception e) {
 	    return "false";
         }
