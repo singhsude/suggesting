@@ -5,7 +5,7 @@ import java.io.*;
 public class Register {
 	public String Result(String store) {
 	        try {   
-			if(store.split("\n")[0].length() == 0 || store.split("\n")[1].length() == 0 || store.split("\n")[2].length() == 0 || store.split("\n")[3].length() == 0 || store.split("\n")[4].length() == 0)
+			if(store.split("\n")[0].length() == 0 || store.split("\n")[1].length() == 0 || store.split("\n")[2].length() == 0 || store.split("\n")[3].length() == 0 || store.split("\n")[4].length() == 0  || store.split("\n")[5].length() == 0)
 			{
 				return "false";
 			}
