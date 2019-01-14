@@ -5,5 +5,6 @@ String object = request.getParameter("obj");
 String type = request.getParameter("type");
 String other = request.getParameter("other");
 String age = request.getParameter("age");
-out.print(reg.Result(name + "\n" + object + "\n" + type + "\n" + other + "\n" + age));  
+String myurl = request.getParameter("myurl");
+out.print(reg.Result(name + "\n" + object + "\n" + type + "\n" + other + "\n" + age + "\n" + myurl));  
 %> 
