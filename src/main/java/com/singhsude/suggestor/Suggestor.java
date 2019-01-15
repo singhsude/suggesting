@@ -168,18 +168,15 @@ public class Suggestor {
         String strLine;
         BufferedReader br;
         try {
-		ClassLoader cl = this.getClass().getClassLoader();
-InputStream inputStream = cl.getResourceAsStream("com/myname/myapp/config/dao-context.xml");
-		
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		InputStream in = classLoader.getResourceAsStream(fileName);
-            br = new BufferedReader(new InputStreamReader(in));
-            //Read File Line By Line
-            while ((strLine = br.readLine()) != null) {
-	    }
-		
-		//Close the input stream
-            in.close();
+		InputStream in = classLoader.getResourceAsStream("src/main/resources/static/" + fileName);
+		    br = new BufferedReader(new InputStreamReader(in));
+		    //Read File Line By Line
+		    while ((strLine = br.readLine()) != null) {
+		    }
+
+			//Close the input stream
+		    in.close();
 		
 		return true;
 	 } catch (Exception e) {//Catch exception if any
