@@ -40,7 +40,7 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <outputDirectory>target</outputDirectory>
-              		  <warName>ROOT</warName>
+              		  <warName>singhsude</warName>
                 </configuration>
             </plugin>
         </plugins>
