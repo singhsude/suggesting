@@ -16,15 +16,15 @@ public class Suggestor {
 
         for (int i = 0; i < words.length; i++) {
             String word = words[i];//"car";
-	    /*
+	    
             for (int j = 0; j < files.length; j++) {
 		String file = "/dictionary/" + files[j];
 		if(readFile(file, word))
-			break;*/
+			break;/*
 		for (int j = 0; j < testfiles.length; j++) {
 		String file = testfiles[j];
 		if(readFile(file, word))
-			break;
+			break;*/
 	    }
         }
 
