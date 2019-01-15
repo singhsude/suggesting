@@ -126,8 +126,6 @@ public class Suggestor {
 	         	    {
 				result2 += strLines[0] + "\n" + strLines[5] + "\n\n";//getStmt(strLines);
 			    }
-	                    }
-
             		}
 		}
             //Close the input stream
