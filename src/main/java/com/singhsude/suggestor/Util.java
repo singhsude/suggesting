@@ -1,4 +1,4 @@
-import com.singhsude.suggestor;
+package com.singhsude.suggestor;
 
 public class Util {
 private static String[] localStorage = new String[256];
