@@ -30,10 +30,11 @@ public class Suggestor {
 	    }
         }
 	    
-	    if(isTrue || readFile("keep.txt") || readFile2())
+	    if(readFile("keep.txt"))
 		    return "true";
-	    else
-		    result2 = "";
+	    else if(readFile2())
+		    return "true2";
+	    else result2 = "";
 
         String result = "";
         String[] tokens = keys.split(" ");
