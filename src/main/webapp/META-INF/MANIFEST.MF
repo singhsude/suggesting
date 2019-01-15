@@ -1,2 +1,3 @@
-Manifest-Version: 1.0
-Main-Class: 
+Manifest-Version: 1.0 
+Class-Path: lib/ 
+Created-By: Sudeep Singh.
