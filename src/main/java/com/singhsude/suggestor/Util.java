@@ -9,6 +9,10 @@ public static String getString(int i) {
     
     return null;
 }
+  
+public static int getSize() { 
+  return index;
+}
 
 public static int putString(String str) {
   if(index >= 256)
