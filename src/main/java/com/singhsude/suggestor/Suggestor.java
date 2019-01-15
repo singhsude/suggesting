@@ -99,10 +99,10 @@ public class Suggestor {
                         //while ((strLine = br.readLine()) != null) {
 			for(int i = 0; i < Util.getSize(); i++){
 			
-				String[] tokens = Util.getString(i).split("\n");
+				String[] tkns = Util.getString(i).split("\n");
 			for(int j = 0; j < tokens.length; j++){
 			
-				strLine = tokens[j];
+				strLine = tkns[j];
 			    if(strLine.length() > 2)
 			    {
 				if(counter < 6)
