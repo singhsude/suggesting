@@ -21,7 +21,7 @@
           <groupId>com.heroku.sdk</groupId>
           <artifactId>heroku-maven-plugin</artifactId>
           <configuration>
-            <appName>singhsude</appName>
+            <appName>suggestor</appName>
           </configuration>
         </plugin>
       </plugins>
@@ -35,7 +35,7 @@
           <groupId>com.heroku.sdk</groupId>
           <artifactId>heroku-maven-plugin</artifactId>
           <configuration>
-            <appName>singhsude-prod</appName>
+            <appName>suggestor-prod</appName>
           </configuration>
         </plugin>
       </plugins>
