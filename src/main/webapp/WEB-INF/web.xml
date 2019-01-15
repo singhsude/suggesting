@@ -1,0 +1,6 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="Java EE: XML Schemas for Java EE Deployment Descriptors" xsi:schemaLocation="Java EE: XML Schemas for Java EE Deployment Descriptors http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>suggestor</display-name> 
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
