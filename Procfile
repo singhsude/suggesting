@@ -1,1 +1,1 @@
-web: java -jar target/suggestor-1.0.war
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT
