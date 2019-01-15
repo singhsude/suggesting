@@ -87,16 +87,18 @@ public class Suggestor {
         DataInputStream in;
         BufferedReader br;
         try {
-	    String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
-            fstream = new FileInputStream(absolutePath + "register.txt");
-            in = new DataInputStream(fstream);
-            br = new BufferedReader(new InputStreamReader(in));
+	    //String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
+            //fstream = new FileInputStream(absolutePath + "register.txt");
+            //in = new DataInputStream(fstream);
+            //br = new BufferedReader(new InputStreamReader(in));
 
 			String[] strLines = new String[6];
 			int counter = 0;
 			boolean objectMatch = false;
 			boolean ageMatch = false;
-                        while ((strLine = br.readLine()) != null) {
+                        //while ((strLine = br.readLine()) != null) {
+			for(int i = 0; i < 256; i++) {
+				strLine = Util.getString(i);
 			    if(strLine.length() > 2)
 			    {
 				if(counter < 6)
@@ -124,7 +126,7 @@ public class Suggestor {
 
             		}
             //Close the input stream
-            in.close();
+            //in.close();
         } catch (Exception e) {
 	    return "false";
         }
