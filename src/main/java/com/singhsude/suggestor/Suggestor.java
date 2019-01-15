@@ -97,7 +97,7 @@ public class Suggestor {
 			boolean objectMatch = false;
 			boolean ageMatch = false;
                         //while ((strLine = br.readLine()) != null) {
-			for(int i = 0; i < 256; i++) {
+			for(int i = 0; i < Util.getSize(); i++) {
 				strLine = Util.getString(i);
 			    if(strLine.length() > 2)
 			    {
