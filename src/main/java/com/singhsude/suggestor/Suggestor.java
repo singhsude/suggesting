@@ -30,9 +30,7 @@ public class Suggestor {
 	    }
         }
 	    
-	    if(!isTrue)
-		    return result2;
-	    else if(readFile("keep.txt") || readFile2())
+	    if(isTrue || readFile("keep.txt") || readFile2())
 		    return "true";
 	    else
 		    result2 = "";
