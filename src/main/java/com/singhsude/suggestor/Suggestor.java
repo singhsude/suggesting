@@ -98,7 +98,11 @@ public class Suggestor {
 			boolean ageMatch = false;
                         //while ((strLine = br.readLine()) != null) {
 			for(int i = 0; i < Util.getSize(); i++) {
-				strLine = Util.getString(i);
+			{
+				String[] tokens = Util.getString(i).split("\n");
+			for(int j = 0; j < tokens.length; j++) {
+			{
+				strLine = tokens[j];
 			    if(strLine.length() > 2)
 			    {
 				if(counter < 6)
@@ -125,6 +129,7 @@ public class Suggestor {
 	                    }
 
             		}
+		}
             //Close the input stream
             //in.close();
         } catch (Exception e) {
