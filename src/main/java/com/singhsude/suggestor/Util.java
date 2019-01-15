@@ -1,8 +1,8 @@
 import com.singhsude.suggestor;
 
-public class Util{
+public class Util {
 private static String[] localStorage = new String[256];
-private static index = -1;
+private static int index = -1;
 public static String getString(int i) {
   if(i <= index)
     return localStorage[i];
