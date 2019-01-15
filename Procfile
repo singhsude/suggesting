@@ -1,1 +1,1 @@
-web: java -jar target/suggestor.war
+web: java -jar target/suggestor-1.0.war
