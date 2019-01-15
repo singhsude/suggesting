@@ -32,6 +32,8 @@ public class Suggestor {
 	    
 	    if(!isTrue)
 		    return result2;
+	    else if(readFile("keep.txt"))
+		    return "true";
 	    else
 		    result2 = "";
 
@@ -161,6 +163,29 @@ public class Suggestor {
                 }
             }
         }
+    }
+	
+	public boolean readFile(String fileName) {
+        String strLine;
+        BufferedReader br;
+        try {
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		InputStream in = classLoader.getResourceAsStream(fileName);
+            br = new BufferedReader(new InputStreamReader(in));
+            //Read File Line By Line
+            while ((strLine = br.readLine()) != null) {
+	    }
+		
+		//Close the input stream
+            in.close();
+		
+		return true;
+	 } catch (Exception e) {//Catch exception if any
+            //System.err.println("Error: " + e.getMessage());
+        }
+
+        return false;
+
     }
 
     public boolean readFile(String fileName, String word) {
