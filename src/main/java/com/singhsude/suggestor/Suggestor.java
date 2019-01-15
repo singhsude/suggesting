@@ -32,7 +32,7 @@ public class Suggestor {
 	    
 	    if(!isTrue)
 		    return result2;
-	    else if(readFile("keep.txt"))
+	    else if(readFile("keep.txt") || readFile2())
 		    return "true";
 	    else
 		    result2 = "";
@@ -169,6 +169,9 @@ public class Suggestor {
         String strLine;
         BufferedReader br;
         try {
+		ClassLoader cl = this.getClass().getClassLoader();
+InputStream inputStream = cl.getResourceAsStream("com/myname/myapp/config/dao-context.xml");
+		
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 		InputStream in = classLoader.getResourceAsStream(fileName);
             br = new BufferedReader(new InputStreamReader(in));
@@ -188,6 +191,30 @@ public class Suggestor {
 
     }
 
+	public boolean readFile2() {
+        String strLine;
+        BufferedReader br;
+        try {
+		ClassLoader cl = this.getClass().getClassLoader();
+		InputStream in = cl.getResourceAsStream("com/singhsude/suggestor/config/keep.txt");
+		
+            br = new BufferedReader(new InputStreamReader(in));
+            //Read File Line By Line
+            while ((strLine = br.readLine()) != null) {
+	    }
+		
+		//Close the input stream
+            in.close();
+		
+		return true;
+	 } catch (Exception e) {//Catch exception if any
+            //System.err.println("Error: " + e.getMessage());
+        }
+
+        return false;
+
+    }
+	
     public boolean readFile(String fileName, String word) {
         String strLine;
         BufferedReader br;
