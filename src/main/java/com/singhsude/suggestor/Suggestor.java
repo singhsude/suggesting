@@ -158,15 +158,11 @@ public class Suggestor {
 
     public boolean readFile(String fileName, String word) {
         String strLine;
-        FileInputStream fstream;
-        DataInputStream in;
         BufferedReader br;
         try {
 		//ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		//InputStream input = classLoader.getResourceAsStream(fileName);
-
-		FileInputStream stream = new FileInputStream(ClassLoader.getSystemResource(fileName).getPath());
-            br = new BufferedReader(new InputStreamReader(stream));//input));
+		InputStream in = Suggestor.class.getResourceAsStream(fileName);
+            br = new BufferedReader(new InputStreamReader(in));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
@@ -182,9 +178,9 @@ public class Suggestor {
                 }
             }
             //Close the input stream
-            //in.close();
+            in.close();
         } catch (Exception e) {//Catch exception if any
-            System.err.println("Error: " + e.getMessage());
+            //System.err.println("Error: " + e.getMessage());
         }
 
         return false;
