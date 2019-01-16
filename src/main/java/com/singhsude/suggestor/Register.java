@@ -11,12 +11,9 @@ public class Register {
 			if(!store.split("\n")[5].toLowerCase().contains("http:"))
 				return "false";
 			
-			Util.putString(store);
-		        //String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
-                        //PrintWriter p = new PrintWriter(new FileOutputStream(absolutePath + "register.txt", true));
-			//p.write(store + "\n\n");
-			//p.close();
-			PrintWriter p = new PrintWriter(new FileOutputStream("register.txt", true));
+			//Util.putString(store);
+		        String absolutePath = java.nio.file.Paths.get("com/singhsude/suggestor/tempstore/register.txt").toString();//System.getenv("OPENSHIFT_DATA_DIR");
+                        PrintWriter p = new PrintWriter(new FileOutputStream(absolutePath /*+ "register.txt"*/, true));
 			p.write(store + "\n\n");
 			p.close();
         	} catch (Exception e) {
