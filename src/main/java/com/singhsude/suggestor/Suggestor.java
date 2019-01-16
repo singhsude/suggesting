@@ -103,18 +103,20 @@ public class Suggestor {
             //fstream = new FileInputStream(absolutePath + "register.txt");
             //in = new DataInputStream(fstream);
             //br = new BufferedReader(new InputStreamReader(in));
-
+		fstream = new FileInputStream("register.txt");
+            	in = new DataInputStream(fstream);
+            	br = new BufferedReader(new InputStreamReader(in))
 			String[] strLines = new String[6];
 			int counter = 0;
 			boolean objectMatch = false;
 			boolean ageMatch = false;
-                        //while ((strLine = br.readLine()) != null) {
-			for(int i = 0; i < Util.getSize(); i++){
+                        while ((strLine = br.readLine()) != null) {
+			//for(int i = 0; i < Util.getSize(); i++){
 			
-				String[] tkns = Util.getString(i).split("\n");
-			for(int j = 0; j < tkns.length; j++){
+				//String[] tkns = Util.getString(i).split("\n");
+			//for(int j = 0; j < tkns.length; j++){
 			
-				strLine = tkns[j];
+				//strLine = tkns[j];
 			    if(strLine.length() > 2)
 			    {
 				if(counter < 6)
@@ -141,13 +143,13 @@ public class Suggestor {
 				ageMatch = false;
 				objectMatch = false;
 			    }
-            		}
-			}
+            		//}
+			//}
 				ageMatch = false;
 				objectMatch = false;
 			}
             //Close the input stream
-            //in.close();
+            in.close();
         } catch (Exception e) {
 	    return "false";
         }
