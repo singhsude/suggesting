@@ -29,13 +29,7 @@ public class Suggestor {
 			break;*/
 	    }
         }
-	    
-	    if(readFile("keep.txt"))
-		    return "true";
-	    else if(readFile2())
-		    return "true2";
-	    else result2 = "";
-
+	
         String result = "";
         String[] tokens = keys.split(" ");
         int noun = 0;
@@ -164,59 +158,12 @@ public class Suggestor {
         }
     }
 	
-	public boolean readFile(String fileName) {
-        String strLine;
-        BufferedReader br;
-        try {
-		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		InputStream in = classLoader.getResourceAsStream("src/main/resources/static/" + fileName);
-		    br = new BufferedReader(new InputStreamReader(in));
-		    //Read File Line By Line
-		    while ((strLine = br.readLine()) != null) {
-		    }
-
-			//Close the input stream
-		    in.close();
-		
-		return true;
-	 } catch (Exception e) {//Catch exception if any
-            //System.err.println("Error: " + e.getMessage());
-        }
-
-        return false;
-
-    }
-
-	public boolean readFile2() {
-        String strLine;
-        BufferedReader br;
-        try {
-		ClassLoader cl = this.getClass().getClassLoader();
-		InputStream in = cl.getResourceAsStream("com/singhsude/suggestor/config/keep.txt");
-		
-            br = new BufferedReader(new InputStreamReader(in));
-            //Read File Line By Line
-            while ((strLine = br.readLine()) != null) {
-	    }
-		
-		//Close the input stream
-            in.close();
-		
-		return true;
-	 } catch (Exception e) {//Catch exception if any
-            //System.err.println("Error: " + e.getMessage());
-        }
-
-        return false;
-
-    }
-	
     public boolean readFile(String fileName, String word) {
         String strLine;
         BufferedReader br;
         try {
 		//ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		InputStream in = Suggestor.class.getResourceAsStream(fileName);
+		InputStream in = Suggestor.class.getResourceAsStream("com/singhsude/suggestor/" + fileName);
             br = new BufferedReader(new InputStreamReader(in));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
