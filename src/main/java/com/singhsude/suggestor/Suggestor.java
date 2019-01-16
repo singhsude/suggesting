@@ -89,6 +89,11 @@ public class Suggestor {
         result2 += "concrete: " + key + "<br>";
         result2 += "age: " + result + "<br>";
         
+	    if(isTrue)
+		    results += "would you like to go for:<br>"
+		else
+			return result2;
+	    
         String strLine = "";
         FileInputStream fstream;
         DataInputStream in;
@@ -142,7 +147,7 @@ public class Suggestor {
 	    return "false";
         }
 
-        return "would you like to go for:\n" + result2;
+        return result2;
         //System.out.println (strLine);
     }
 
