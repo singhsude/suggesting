@@ -142,8 +142,6 @@ public class Suggestor {
 				objectMatch = false;
 			    }
             		}
-				ageMatch = false;
-				objectMatch = false;
 			}
 				ageMatch = false;
 				objectMatch = false;
