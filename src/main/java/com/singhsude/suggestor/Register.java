@@ -9,7 +9,7 @@ public class Register {
 				return "false";
 			
 			if(!store.split("\n")[5].toLowerCase().contains("http:"))
-				return false;
+				return "false";
 			
 			Util.putString(store);
 		        //String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
