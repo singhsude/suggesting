@@ -14,7 +14,7 @@ public class Suggestor {
     public String Result(String args) {
 	    
         String[] words = args.toLowerCase().replace("?", "").replace(".", "").replace(";", "")/*.replace("'", " ")*/.replace("\"", " ").replace("@", " ").replace("#", "").replace("ing", "e").replace("es", "").split(" ");//strLine.split(" ");
-	result2 += words[0];
+	
 	boolean isTrue = false;
         for (int i = 0; i < words.length; i++) {
             String word = words[i];//"car";
@@ -163,7 +163,7 @@ public class Suggestor {
         BufferedReader br;
         try {
 		//ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		InputStream in = Suggestor.class.getResourceAsStream("com/singhsude/suggestor/" + fileName);
+		InputStream in = Suggestor.class.getResourceAsStream("com/singhsude/suggestor" + fileName);
             br = new BufferedReader(new InputStreamReader(in));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
