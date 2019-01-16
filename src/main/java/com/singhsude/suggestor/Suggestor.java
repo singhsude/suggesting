@@ -163,8 +163,11 @@ public class Suggestor {
         BufferedReader br;
         try {
 		//ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		InputStream in = Suggestor.class.getResourceAsStream("com/singhsude/suggestor" + fileName);
-            br = new BufferedReader(new InputStreamReader(in));
+		//InputStream in = Suggestor.class.getResourceAsStream("com/singhsude/suggestor" + fileName);
+            //br = new BufferedReader(new InputStreamReader(in));
+		ClassLoader cl = this.getClass().getClassLoader();
+		InputStream in = cl.getResourceAsStream("com/singhsude/suggestor" + fileName);
+		br = new BufferedReader(new InputStreamReader(in));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
