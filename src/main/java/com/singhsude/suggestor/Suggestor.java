@@ -112,7 +112,7 @@ public class Suggestor {
 			for(int i = 0; i < Util.getSize(); i++){
 			
 				String[] tkns = Util.getString(i).split("\n");
-			for(int j = 0; j < tokens.length; j++){
+			for(int j = 0; j < tkns.length; j++){
 			
 				strLine = tkns[j];
 			    if(strLine.length() > 2)
