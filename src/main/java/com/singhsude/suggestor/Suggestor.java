@@ -96,7 +96,7 @@ public class Suggestor {
 	    
         String strLine = "";
         FileInputStream fstream;
-        DataInputStream in;
+        InputStream in;
         BufferedReader br;
         try {
 	    //String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
