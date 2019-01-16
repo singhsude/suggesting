@@ -10,10 +10,10 @@ public class Suggestor {
     public String match = "";
     public String result2 = "";
     public String[] files = {"adjectives/1syllableadjectives.txt", "adjectives/2syllableadjectives.txt", "adjectives/3syllableadjectives.txt", "adjectives/4syllableadjectives.txt", "adjectives/28K adjectives.txt", "adverbs/1syllableadverbs.txt", "adverbs/2syllableadverbs.txt", "adverbs/3syllableadverbs.txt", "adverbs/4syllableadverbs.txt", "adverbs/6K adverbs.txt", "nouns/1syllablenouns.txt", "nouns/2syllablenouns.txt", "nouns/3syllablenouns.txt", "nouns/4syllablenouns.txt", "nouns/91K nouns.txt", "verbs/1syllableverbs.txt", "verbs/2syllableverbs.txt", "verbs/3syllableverbs.txt", "verbs/4syllableverbs.txt", "verbs/31K verbs.txt"};
-    public String[] testfiles = {"1syllableadjectives.txt", "2syllableadjectives.txt", "3syllableadjectives.txt", "4syllableadjectives.txt", "28K adjectives.txt", "1syllableadverbs.txt", "2syllableadverbs.txt", "3syllableadverbs.txt", "4syllableadverbs.txt", "6K adverbs.txt", "1syllablenouns.txt", "2syllablenouns.txt", "3syllablenouns.txt", "4syllablenouns.txt", "91K nouns.txt", "1syllableverbs.txt", "2syllableverbs.txt", "3syllableverbs.txt", "4syllableverbs.txt", "31K verbs.txt"};
-    public String Result(String args) {
+    
+    public String Result(String arg) {
 	    
-        String[] words = args.toLowerCase().replace("?", "").replace(".", "").replace(";", "")/*.replace("'", " ")*/.replace("\"", " ").replace("@", " ").replace("#", "").replace("ing", "e").replace("es", "").split(" ");//strLine.split(" ");
+        String[] words = arg.toLowerCase().replace("?", "").replace(".", "").replace(";", "")/*.replace("'", " ")*/.replace("\"", " ").replace("@", " ").replace("#", "").replace("ing", "e").replace("es", "").split(" ");//strLine.split(" ");
 	
 	boolean isTrue = false;
         for (int i = 0; i < words.length; i++) {
@@ -147,9 +147,6 @@ public class Suggestor {
 				objectMatch = false;
 			    }
             		//}
-			
-				ageMatch = false;
-				objectMatch = false;
 			 }
 			}
             //Close the input stream
