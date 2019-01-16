@@ -105,7 +105,7 @@ public class Suggestor {
             //br = new BufferedReader(new InputStreamReader(in));
 		fstream = new FileInputStream("register.txt");
             	in = new DataInputStream(fstream);
-            	br = new BufferedReader(new InputStreamReader(in))
+            	br = new BufferedReader(new InputStreamReader(in));
 			String[] strLines = new String[6];
 			int counter = 0;
 			boolean objectMatch = false;
@@ -144,9 +144,10 @@ public class Suggestor {
 				objectMatch = false;
 			    }
             		//}
-			//}
+			
 				ageMatch = false;
 				objectMatch = false;
+			 }
 			}
             //Close the input stream
             in.close();
