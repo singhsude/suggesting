@@ -132,7 +132,7 @@ public class Suggestor {
                                 objectMatch = true;
 				
                             }
-			    if(strLine.equals("child") || strLine.equals("old") || strLine.equals("elder") || strLine.equals("youth"))
+			    if(strLine.trim().toLowerCase().contains("http:"))
 				counter = 0;
 			    if(objectMatch && ageMatch)
 	         	    {
