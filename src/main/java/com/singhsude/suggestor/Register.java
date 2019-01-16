@@ -16,6 +16,9 @@ public class Register {
                         //PrintWriter p = new PrintWriter(new FileOutputStream(absolutePath + "register.txt", true));
 			//p.write(store + "\n\n");
 			//p.close();
+			PrintWriter p = new PrintWriter(new FileOutputStream("register.txt", true));
+			p.write(store + "\n\n");
+			p.close();
         	} catch (Exception e) {
 			return "false";
 	        }
