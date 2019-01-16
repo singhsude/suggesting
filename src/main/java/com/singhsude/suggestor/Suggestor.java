@@ -100,12 +100,12 @@ public class Suggestor {
         BufferedReader br;
         try {
 	    //String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
-            //fstream = new FileInputStream(absolutePath + "register.txt");
-            //in = new DataInputStream(fstream);
-            //br = new BufferedReader(new InputStreamReader(in));
-		ClassLoader cl = this.getClass().getClassLoader();
-		in = cl.getResourceAsStream("register.txt");
-		br = new BufferedReader(new InputStreamReader(in));
+            fstream = new FileInputStream("register.txt");
+            in = new DataInputStream(fstream);
+            br = new BufferedReader(new InputStreamReader(in));
+		//ClassLoader cl = this.getClass().getClassLoader();
+		//in = cl.getResourceAsStream("register.txt");
+		//br = new BufferedReader(new InputStreamReader(in));
 		//fstream = new FileInputStream("register.txt");
             	//in = new DataInputStream(fstream);
             	//br = new BufferedReader(new InputStreamReader(in));
