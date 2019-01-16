@@ -90,7 +90,7 @@ public class Suggestor {
         result2 += "age: " + result + "<br>";
         
 	    if(isTrue)
-		    results += "would you like to go for:<br>";
+		    result2 += "would you like to go for:<br>";
 		else
 			return result2;
 	    
