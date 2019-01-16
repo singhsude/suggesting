@@ -90,7 +90,7 @@ public class Suggestor {
         result2 += "age: " + result + "<br>";
         
 	    if(isTrue)
-		    result2 += "would you like to go for:<br>";
+		    result2 += "would you like to go for:";
 		else
 			return result2;
 	    
@@ -124,25 +124,30 @@ public class Suggestor {
 			    }
 
                             // Print the content on the console
-			    for(int k = 0; k < keys2.length; k++) {
+			 for(int k = 0; k < keys2.length; k++) {
+				    
                             if (strLine.trim().toLowerCase().equals(result.trim().toLowerCase())){
                                 ageMatch = true;
                             }
 			    if (strLine.trim().toLowerCase().contains(keys2[k].trim().toLowerCase())) {
-                                objectMatch = true;
-				
+                                objectMatch = true;				
                             }
+				    
 			    if(strLine.trim().toLowerCase().contains("http:"))
 				counter = 0;
 			    if(objectMatch && ageMatch)
 	         	    {
-				result2 += strLines[0] + "\n" + strLines[5] + "\n\n";//getStmt(strLines);
+				result2 += "<br>" + strLines[0] + "\n" + strLines[5] + "<br><br>";//getStmt(strLines);
 				ageMatch = false;
 				objectMatch = false;
 			    }
-            			}
+            		}
+				ageMatch = false;
+				objectMatch = false;
 			}
-		}
+				ageMatch = false;
+				objectMatch = false;
+			}
             //Close the input stream
             //in.close();
         } catch (Exception e) {
