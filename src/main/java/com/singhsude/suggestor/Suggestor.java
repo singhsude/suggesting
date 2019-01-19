@@ -142,7 +142,7 @@ public class Suggestor {
 				counter = 0;
 			    if(objectMatch && ageMatch)
 	         	    {
-				result2 += "<br>" + strLines[0] + "\n" + strLines[5] + "<br><br>";//getStmt(strLines);
+				result2 += "<br>" + strLines[0] + "<br>" + strLines[5] + "<br><br>";//getStmt(strLines);
 				ageMatch = false;
 				objectMatch = false;
 				    break;
