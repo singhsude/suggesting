@@ -30,7 +30,7 @@
      <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
      <id>openshift</id>
      <build>
-        <finalName>SampleApp</finalName>
+        <finalName>suggestor/finalName>
         <plugins>
           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -46,7 +46,7 @@
       </build>
     </profile>
   </profiles>
-  
+  <!--
   <build>
     <plugins>
         <plugin>
@@ -102,5 +102,5 @@
     </build>
   </profile>
 </profiles>
-    
+    -->
 </project>
