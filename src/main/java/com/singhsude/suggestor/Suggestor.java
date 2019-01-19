@@ -145,6 +145,7 @@ public class Suggestor {
 				result2 += "<br>" + strLines[0] + "\n" + strLines[5] + "<br><br>";//getStmt(strLines);
 				ageMatch = false;
 				objectMatch = false;
+				    break;
 			    }
             		//}
 			 }
