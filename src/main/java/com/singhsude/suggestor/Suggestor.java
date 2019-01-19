@@ -149,6 +149,12 @@ public class Suggestor {
 			    }
             		//}
 			 }
+				if(objectMatch && ageMatch)
+	         	    	{
+					ageMatch = false;
+					objectMatch = false;
+				    	break;
+			    	}
 			}
             //Close the input stream
             in.close();
