@@ -186,7 +186,7 @@ public class Suggestor {
 		//InputStream in = Suggestor.class.getResourceAsStream("com/singhsude/suggestor" + fileName);
             //br = new BufferedReader(new InputStreamReader(in));
 		ClassLoader cl = this.getClass().getClassLoader();
-		InputStream in = cl.getResourceAsStream("com/singhsude/suggestor" + fileName);
+		InputStream in = cl.getResourceAsStream("static/" + fileName);
 		br = new BufferedReader(new InputStreamReader(in));
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
