@@ -14,7 +14,7 @@ public class Register {
 			//Util.putString(store);
 		        //String absolutePath = java.nio.file.Paths.get("/tempstore/register.txt").toAbsolutePath().toString();
 			String absolutePath = System.getenv("OPENSHIFT_DATA_DIR");
-                        PrintWriter p = new PrintWriter(new FileOutputStream(absolutePath + "/register.txt", true));
+                        PrintWriter p = new PrintWriter(new FileOutputStream(absolutePath + "register.txt", true));
 			p.write(store + "\n\n");
 			p.close();
         	} catch (Exception e) {
