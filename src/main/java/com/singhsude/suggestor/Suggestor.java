@@ -195,11 +195,11 @@ public class Suggestor {
                 {
                     if (fileName.contains("noun")) {
                         nouns += word + " ";
+			return true;
                     }
                     //System.out.println(fileName + " " + word);
                     keys += fileName + " ";
                     match += word + " ";
-                    return true;
                 }
             }
             //Close the input stream
