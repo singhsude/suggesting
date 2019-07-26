@@ -22,7 +22,7 @@ public class Suggestor {
             for (int j = 0; j < files.length; j++) {
 		String file = "/dictionary/" + files[j];
 		if((isTrue = readFile(file, word)))
-			break;/*
+			if(isTrue) continue;/*
 		for (int j = 0; j < testfiles.length; j++) {
 		String file = testfiles[j];
 		if(readFile(file, word))
@@ -199,17 +199,17 @@ public class Suggestor {
                     //System.out.println(fileName + " " + word);
                     keys += fileName + " ";
                     match += word + " ";
-                    //return true;
+                    return true;
                 }
             }
             //Close the input stream
             in.close();
         } catch (Exception e) {//Catch exception if any
             //System.err.println("Error: " + e.getMessage());
-		return false;
+		//return false;
         }
 
-        return true;
+        return false;
 
     }
 
