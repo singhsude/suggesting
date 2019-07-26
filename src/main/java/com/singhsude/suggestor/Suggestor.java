@@ -16,16 +16,13 @@ public class Suggestor {
         String[] words = arg.toLowerCase().replace("?", "").replace(".", "").replace(";", "")/*.replace("'", " ")*/.replace("\"", " ").replace("@", " ").replace("#", "").replace("ing", "e").replace("es", "").split(" ");//strLine.split(" ");
 	
 	boolean isTrue = false;
-	boolean istrue = false;
         for (int i = 0; i < words.length; i++) {
             String word = words[i];//"car";
 	    
             for (int j = 0; j < files.length; j++) {
 		String file = "/dictionary/" + files[j];
-		if((istrue = readFile(file, word)));
-                if(istrue)
-			isTrue = true;
-			/*break;
+		if((isTrue = readFile(file, word)))
+			break;/*
 		for (int j = 0; j < testfiles.length; j++) {
 		String file = testfiles[j];
 		if(readFile(file, word))
@@ -202,16 +199,17 @@ public class Suggestor {
                     //System.out.println(fileName + " " + word);
                     keys += fileName + " ";
                     match += word + " ";
-                    return true;
+                    //return true;
                 }
             }
             //Close the input stream
             in.close();
         } catch (Exception e) {//Catch exception if any
             //System.err.println("Error: " + e.getMessage());
+		return false;
         }
 
-        return false;
+        return true;
 
     }
 
