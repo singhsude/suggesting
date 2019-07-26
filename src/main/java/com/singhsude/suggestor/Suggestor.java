@@ -191,7 +191,7 @@ public class Suggestor {
             //Read File Line By Line
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
-                if (strLine.trim().equals(word))//strLine.trim().contains(word))
+                if (strLine.trim().toLowerCase().equals(word.trim().toLowerCase()) || strLine.trim().toLowerCase().equals(word.trim().toLowerCase() + "s"))//strLine.trim().contains(word))
                 {
                     if (fileName.contains("noun")) {
                         nouns += word + " ";
