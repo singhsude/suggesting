@@ -22,7 +22,7 @@ public class Suggestor {
             for (int j = 0; j < files.length; j++) {
 		String file = "/dictionary/" + files[j];
 		if((isTrue = readFile(file, word)))
-			if(isTrue) continue;/*
+			break;/*
 		for (int j = 0; j < testfiles.length; j++) {
 		String file = testfiles[j];
 		if(readFile(file, word))
